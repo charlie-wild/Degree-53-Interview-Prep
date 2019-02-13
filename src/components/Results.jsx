@@ -1,17 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import Collapsible from 'react-collapsible';
-import './results.css'
+import './results.css';
 
 class Results extends Component {
   render() {
     const { results } = this.props;
     return (
-      <div className='results'>
+      <div className="results">
         {results.length
           ? (
             <Fragment>
-              <h3 className='title is-3 is-centered'>{results[0].name}</h3>
-              <p className='title is-5'>
+              <h3 className="title is-3 is-centered">{results[0].name}</h3>
+              <p className="title is-5">
                 {results[0].description}
               </p>
               <p>
@@ -28,7 +28,7 @@ class Results extends Component {
                   Forks:
                   {results[0].forks}
                 </p>
-              </Collapsible>      
+              </Collapsible>
             </Fragment>
           )
           : <p>No Result Found</p>}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './search.css'
 import * as api from "./api";
 import Results from './Results';
 
@@ -11,10 +12,10 @@ class Search extends Component {
   };
   render() {
     return (
-      <div>
+      <div className='search'>
         <form onSubmit={this.handleSubmit}>
-        <label htmlFor='search'>Search: </label>
         <input
+        className='input is-primary user-input'
         type='text'
         id='search'
         placeholder='Search for a respository by name.'
@@ -22,7 +23,9 @@ class Search extends Component {
         value={this.state.search}
         onChange={this.handleChange}
         />
-        <button>Submit Search</button>
+        <br/>
+        <br/>
+        <button className='button is-primary'>Submit Search</button>
         </form>
         {this.state.err && <p>Oh no! Something went wrong!</p>}
         {this.state.searched && <Results results={this.state.results}/>}

@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <Fragment>
         <header className="title">
-          <h1 className="title is-2 is-centered">Search For Your Github Repo Below!</h1>
+          <h1 className="title is-2 is-centered">Github Repo Search</h1>
         </header>
         <Search />
       </Fragment>

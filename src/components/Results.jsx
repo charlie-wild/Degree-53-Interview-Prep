@@ -9,6 +9,7 @@ class Results extends Component {
        {results.length ?
        <Fragment>
              <h3>{results[0].name}</h3>
+             <p>Click <a href={results[0].html_url}>here </a>to visit the repo.</p>
              <p>{results[0].description}</p>
              <Collapsible trigger='Detailed Info'>
                <p>Placeholder</p>

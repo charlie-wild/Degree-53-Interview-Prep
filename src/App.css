@@ -1,15 +1,4 @@
-.App {
-  text-align: center;
-  display: grid;
-  height: 100vh;
-  grid-template-rows: 1fr 1fr 7fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-areas: 'header header title header header' 
-  'navbar navbar navbar navbar navbar'
-  'content content content content content'
-  'footer footer footer footer footer';
-}
-
 .title {
+  margin-top: 2%;
   text-align: center;
 }

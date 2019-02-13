@@ -1,5 +1,10 @@
 .results {
   margin-top: 15%;
   position: relative;
+}
 
+@media only screen and (max-width: 900px) {
+  .results {
+    padding-top: 25%;
+  }
 }

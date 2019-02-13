@@ -28,7 +28,6 @@ class Search extends Component {
         <button className='button is-primary is-search'>Submit Search</button>
         </form>
         {this.state.err && <p>Oh no! Something went wrong!</p>}
-        
       </div>
       {this.state.searched && <Results results={this.state.results} />}
      </div> 

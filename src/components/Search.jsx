@@ -12,8 +12,9 @@ class Search extends Component {
   };
   render() {
     return (
+    <div className='app'>
       <div className='search'>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit}>        
         <input
         className='input is-primary user-input'
         type='text'
@@ -24,12 +25,13 @@ class Search extends Component {
         onChange={this.handleChange}
         />
         <br/>
-        <br/>
-        <button className='button is-primary'>Submit Search</button>
+        <button className='button is-primary is-search'>Submit Search</button>
         </form>
         {this.state.err && <p>Oh no! Something went wrong!</p>}
-        {this.state.searched && <Results results={this.state.results}/>}
+        
       </div>
+      {this.state.searched && <Results results={this.state.results} />}
+     </div> 
     );
   }
 

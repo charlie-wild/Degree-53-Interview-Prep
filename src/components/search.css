@@ -1,11 +1,27 @@
 .search {
   position: absolute;
-  top: 40%;
+  top: 25%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);    
 }
 
+.app {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .user-input {
-  max-width: 90%;
+  display: flex;
+ }
+
+
+
+.is-search {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
 }

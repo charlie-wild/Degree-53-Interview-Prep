@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react';
 import Collapsible from 'react-collapsible';
+import Loader from 'react-loader-spinner';
 import './results.css';
 
 
 const Results = (props) => {
-  const { results } = props;
+  const { results, loading } = props;
   return (
     <div className="results">
       {results.length
@@ -31,7 +32,12 @@ const Results = (props) => {
             </Collapsible>
           </Fragment>
         )
-        : <p>No Result Found</p>}
+        : !loading ? <p>No Result Found</p> : <Loader
+          type="Puff"
+          color="#00BFFF"
+          height="100"
+          width="100"
+        />}
     </div>
   );
 }

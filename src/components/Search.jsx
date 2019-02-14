@@ -8,7 +8,8 @@ class Search extends Component {
     search: '',
     results: [],
     searched: false,
-    err: false
+    err: false,
+    loading: true
   };
   render() {
     return (
@@ -30,7 +31,7 @@ class Search extends Component {
         </form>
         {this.state.err && <p>Oh no! Something went wrong!</p>}
       </div>
-      {this.state.searched && <Results results={this.state.results} />}
+      {this.state.searched && <Results results={this.state.results}loading={this.state.loading} />}
      </div> 
     );
   }
@@ -50,7 +51,7 @@ class Search extends Component {
   fetchRepos = () => {
     api.getGitHubRepo(this.state.search)
     .then((results) => {
-      this.setState({results, searched: true, search: ''})
+      this.setState({results, searched: true, loading: false, search: ''})
       
     })
     .catch(() => {

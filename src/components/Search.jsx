@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './search.css'
-import * as api from "./api";
+import * as api from "../api";
 import Results from './Results';
 
 class Search extends Component {
@@ -19,6 +19,7 @@ class Search extends Component {
         className='input is-primary user-input'
         type='text'
         id='search'
+        aria-label='search'
         placeholder='Search for a respository by name.'
         required
         value={this.state.search}
